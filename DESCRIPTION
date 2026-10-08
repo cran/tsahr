@@ -1,0 +1,57 @@
+Package: tsahr
+Type: Package
+Title: Trial Sequential Analysis for Meta-Analyses of Hazard Ratios
+Version: 0.2.8.17
+Authors@R: c(
+    person("Tarak", "Dhaouadi", email = "dhaouaditarak@yahoo.fr", role = c("aut", "cre")),
+    person("Anne", "Lyngholm Soerensen", role = c("ctb", "cph"),
+           comment = "author of the RTSA package, from which the boundary engine is ported"),
+    person("Markus", "Harboe Olsen", role = c("ctb", "cph"),
+           comment = "author of the RTSA package, from which the boundary engine is ported"),
+    person("Theis", "Lange", role = c("ctb", "cph"),
+           comment = "author of the RTSA package, from which the boundary engine is ported"),
+    person("Christian", "Gluud", role = c("ctb", "cph"),
+           comment = "author of the RTSA package, from which the boundary engine is ported"))
+Description: Performs Trial Sequential Analysis (TSA) for meta-analyses of
+    time-to-event outcomes reported as hazard ratios. Implements the
+    Schoenfeld required-events sample-size formula generalised for unequal
+    allocation, the Diversity (D-squared) heterogeneity adjustment of
+    Wetterslev et al. (2009), and O'Brien-Fleming-type alpha- and
+    beta-spending trial sequential monitoring boundaries computed at the
+    inverse-variance information based on observed study-level log-HR
+    standard errors (not merely event counts), via
+    a compiled (C++) recursive numerical integration engine ported from
+    the R package 'RTSA' (Soerensen, Olsen, Lange and Gluud; an R
+    implementation of the Trial Sequential Analysis software of the Copenhagen
+    Trial Unit, <https://ctu.dk/tools>), with no fixed software-imposed limit
+    on the number of looks (subject to available computational resources). Produces a cumulative
+    Z-curve plot with efficacy, futility, and conventional significance
+    boundaries. Methodology follows Miladinovic et al. (2013)
+    <doi:10.1016/j.jclinepi.2012.11.007> and Wetterslev et al. (2009)
+    <doi:10.1186/1471-2288-9-86>.
+License: GPL (>= 2)
+Copyright: inst/COPYRIGHTS
+Encoding: UTF-8
+Depends: R (>= 4.0.0)
+Imports: metafor, readxl, ggplot2 (>= 3.4.0), stats, utils, Rcpp (>=
+        1.0.0)
+LinkingTo: Rcpp
+Suggests: testthat (>= 3.0.0), RTSA
+Config/testthat/edition: 3
+URL: https://github.com/tarak-dhaouadi/tsahr
+BugReports: https://github.com/tarak-dhaouadi/tsahr/issues
+NeedsCompilation: yes
+Maintainer: Tarak Dhaouadi <dhaouaditarak@yahoo.fr>
+Config/roxygen2/version: 8.1.0
+Packaged: 2026-09-26 17:50:12 UTC; dhaou
+Author: Tarak Dhaouadi [aut, cre],
+  Anne Lyngholm Soerensen [ctb, cph] (author of the RTSA package, from
+    which the boundary engine is ported),
+  Markus Harboe Olsen [ctb, cph] (author of the RTSA package, from which
+    the boundary engine is ported),
+  Theis Lange [ctb, cph] (author of the RTSA package, from which the
+    boundary engine is ported),
+  Christian Gluud [ctb, cph] (author of the RTSA package, from which the
+    boundary engine is ported)
+Repository: CRAN
+Date/Publication: 2026-10-08 09:50:02 UTC
